@@ -6,6 +6,7 @@ import Home from './routes/Home/Home.component';
 import Repos from './routes/Repos/Repos.component';
 import Repo from './routes/Repo/Repo.component'
 import Informations from './routes/Informations/Informations.component'
+import NotFound from './routes/NotFound/NotFound.component'
 import {
   BrowserRouter as Router,
   Route,
@@ -38,6 +39,7 @@ class App extends Component {
               <Route path='/info' component={Informations}/>
               <Route path='/repos' component={() => <Repos repositories={this.state.repositories}/>} />
               <Route path='/repo/:repo' component={Repo} />
+              <Route path="*" component={NotFound} />
             </Switch>
           <Footer />
         </Router>
