@@ -12,7 +12,7 @@ class NotFound extends Component {
     }
 
     countDown = () => this.setState(prevState => ({
-        counter: prevState.counter- 1
+        counter: prevState.counter - 1
     }))
 
     componentWillUnmount = () => {
